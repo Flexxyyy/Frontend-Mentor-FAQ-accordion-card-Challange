@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="left">
+        <img id='girl-img' src="./images/illustration-woman-online-desktop.svg" alt="">
+        <img id='box-img' src="./images/illustration-box-desktop.svg" alt="">
+      </div>
+      <div class="right">
+        <div class="header">
+          <h2>FAQ</h2>
+        </div>
+        <div class="info-content">
+          <div class="small border">
+            <h6 class="gray heading6">How many team members can I invite?
+              <button class='btn' onclick="toggle(0)"><span class='icon'></span></button>
+            </h6>
+            <p class="data remove">You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+          </div>
+          <div class="small border">
+            <h6 class="gray heading6">What is the maximum file upload size?
+              <button class='btn' onclick="toggle(1)" ><span class='icon'></span></button>
+            </h6>
+            <p class="data remove">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+          <div class="small border">
+            <h6 class="gray heading6">How do I reset my password?
+              <button class='btn' onclick="toggle(2)"><span class='icon'></span></button>
+            </h6>
+            <p class="data remove">Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.</p>
+          </div>
+          <div class="small border">
+            <h6 class="gray heading6">Can I cancel my subscription?
+              <button class='btn' onclick="toggle(3)"><span class='icon'></span></button>
+            </h6>
+            <p class="data remove">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+          <div class="small border">
+            <h6 class="gray heading6">Do you provide additional support?
+              <button class='btn' onclick="toggle(4)"><span class='icon'></span></button>
+            </h6>
+            <p class="data remove">  Chat and email support is available 24/7. Phone lines are open during normal business hours..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sudhanshu Panthri</a>
+  </div>
+  <script>
+    function toggle(i){
+      let p=document.querySelectorAll('.data');
+      let heading=document.querySelectorAll('.heading6');
+      if(p[i].classList.contains('remove') && heading[i].classList.contains('gray')){
+        p[i].classList.remove('remove');
+        heading[i].classList.add('black');
+    }
+    else{
+        p[i].classList.add('remove');
+        heading[i].classList.remove('black');
+    }
+    }
+  </script>
+</body>
+</html>
